@@ -16,8 +16,8 @@ start = time.time()
 vet = [i for i in range(int(n))]
 
 print(conn.root)
-print(conn.root.get_answer(vet))
+print("Soma: ", conn.root.get_answer(vet))
 
 end = time.time()
 
-print(end - start)
+print("Tempo de execução, em segundos, do cliente: ", end - start)

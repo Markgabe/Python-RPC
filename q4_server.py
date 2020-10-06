@@ -1,3 +1,5 @@
+import time
+
 import rpyc
 
 
@@ -9,7 +11,12 @@ class MyService(rpyc.Service):
         pass
 
     def exposed_get_answer(self, vet):
-        return sum(vet)
+        start = time.time()
+        soma = sum(vet)
+        end = time.time()
+        print("Tempo de execução, em segundos, do procedimento no server: ", end - start)
+
+        return soma
 
 
 if __name__ == "__main__":
